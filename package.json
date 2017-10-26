@@ -1,0 +1,28 @@
+{
+  "name": "ts-d3js",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/d3": "^4.11.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "http-server": "^0.10.0",
+    "typescript": "^2.5.3",
+    "uglify-es": "^3.1.5"
+  },
+  "dependencies": {
+    "d3": "^4.11.0"
+  },
+  "scripts": {
+    "build": "yarn tsc -p .",
+    "start": "yarn http-server",
+    "bundle-tutorial1": "browserify build/tutorial1/main.js -t babelify | uglifyjs -cm > public/src/tutorial1.js"
+  }
+}
